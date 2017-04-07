@@ -16,9 +16,10 @@ int main()
     printf("\n\n\n\n\n\n\n\n");
     printf("Relógio");
 
-Loop:;
-    printf("\r     hora:%2dh %2dm %2ds", hora, minuto, segundo);
+Loop:
+   printf("\r     hora:%dh %dm %ds", hora, minuto, segundo);
     segundo++;
+
     if(segundo==60)
         {
             segundo=0;
@@ -33,12 +34,12 @@ Loop:;
         {
             hora=0;
         }
-    sleep(1);
+        Sleep(1000);
     if(Ahora == hora && Amin == minuto && Aseg == segundo) {
         printf(" \n \n \n Acorda Vagabundo");
         goto fim ;
         }
-
+goto Loop;
 fim:
 
  return(0);
